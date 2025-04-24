@@ -98,8 +98,15 @@ location.reload();
 	}
 }
 if (has111($wordshash,$_SERVER['REQUEST_URI']) ){
-   
-	$texte=explode("/",str_replace([$wordshash."/",$wordshash],["",""],$_SERVER['REQUEST_URI']))[0];
+   	$texte=explode("/",str_replace([$wordshash."/",$wordshash],["",""],$_SERVER['REQUEST_URI']));
+	
+	
+	 if(count($texte)==2){
+	$texte=$texte[0].$texte[1];
+	} else if(count($texte)==3){
+$texte=$texte[0].$texte[1].$texte[2];
+	 }
+	 else $texte=$texte[0];
 	//$texte= substr($texte,5,strlen($texte));
 	return donres($headersRes,$res,$texte);
 }else
