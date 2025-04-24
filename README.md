@@ -1,2 +1,2 @@
-# newapplicationdevai
-start appdev today
+# galapdevappstunnape
+devsz
